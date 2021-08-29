@@ -56,5 +56,30 @@ function note(thing){
     console.log(['NOTE:',thing].join(' '));
 }
 console.log(
-    +!+[] + [+[]]
+
 );
+var letters = ['a', 'b', 'c'];
+
+letters[1];
+//=> 'b'
+
+function naiveNth(a, index) {
+    return a[index];
+}
+
+function isIndexed(data) {
+    return _.isArray(data) || _.isString(data);
+}
+
+function nth(a, index) {
+    if (!_.isNumber(index)) fail("Expected a number as the index");
+    if (!isIndexed(a)) fail("Not supported on non-indexed type");
+    if ((index < 0) || (index > a.length - 1))
+        fail("Index value is out of bounds");
+
+    return a[index];
+}
+
+function second(a) {
+    return nth(a, 1);
+}

@@ -83,3 +83,7 @@ function nth(a, index) {
 function second(a) {
     return nth(a, 1);
 }
+
+console.log(
+    second(['a','b'])
+)
